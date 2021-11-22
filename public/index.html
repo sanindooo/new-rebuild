@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+
+        .no-scroll {
+            overflow: hidden;
+        }
+
+        .infographic {
+            max-width: 250px;
+        }
+
+        .active-tab {
+            color: rgb(190, 24, 93);
+            border-bottom: solid 3px rgb(190, 24, 93);
+        }
+
+    </style>
+
+</head>
+<body>
+    <header class="bg-purple-900 py-2 md:py-5">
+
+        <div class="container md:flex items-center justify-between">
+            <div class="flex items-center justify-between py-2 md:px-4 md:py-2">
+                <div>
+                    <!-- brand logo start  -->
+                    <svg class="w-20 h-20" viewBox="0 0 167 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M159.168 41.7569V26.101C159.168 22.8536 158.303 19.6648 156.661 16.8632C155.018 14.0615 152.659 11.7483 149.826 10.1618C146.992 8.57533 143.787 7.77298 140.54 7.83742C137.293 7.90185 134.122 8.83074 131.354 10.5284C129.872 7.35834 127.51 4.68085 124.55 2.81448C121.589 0.948114 118.155 -0.0285694 114.656 0.000636343C111.157 0.0298421 107.739 1.06371 104.811 2.97923C101.882 4.89475 99.5652 7.61128 98.136 10.8056C94.524 11.5397 91.2182 13.3484 88.6522 15.9944C86.0862 18.6404 84.3799 22.0001 83.7571 25.633C83.357 25.1622 82.9389 24.7116 82.503 24.2811C78.9404 20.7604 74.2306 18.6381 69.2333 18.3015C64.2359 17.9649 59.2841 19.4363 55.2815 22.4473C51.2789 25.4583 48.4923 29.8081 47.4304 34.7029C46.3684 39.5978 47.1019 44.7112 49.4969 49.1102C47.99 48.559 46.6888 47.558 45.7697 46.2427C44.8505 44.9274 44.3578 43.3615 44.3582 41.7569V26.101C44.3577 22.4729 43.2768 18.927 41.2531 15.9156C39.2294 12.9042 36.3547 10.5637 32.9956 9.19262C29.6365 7.8215 25.9451 7.48186 22.3922 8.217C18.8392 8.95215 15.5857 10.7288 13.0465 13.3203C11.348 11.5816 9.31861 10.2006 7.07792 9.2587C4.83723 8.31676 2.43062 7.83299 0 7.83591L0 18.2731C2.07609 18.2731 4.06715 19.0979 5.53517 20.5659C7.00319 22.0339 7.82792 24.025 7.82792 26.101V49.5848H18.2651V26.101C18.2651 24.025 19.0899 22.0339 20.5579 20.5659C22.0259 19.0979 24.017 18.2731 26.0931 18.2731C28.1691 18.2731 30.1602 19.0979 31.6282 20.5659C33.0962 22.0339 33.921 24.025 33.921 26.101V41.7569C33.9217 44.8133 34.6891 47.8207 36.1529 50.5039C37.6167 53.187 39.7302 55.4601 42.2998 57.115C44.8694 58.77 47.813 59.754 50.8613 59.977C53.9096 60.1999 56.9651 59.6547 59.7482 58.3912L59.8542 58.4369C62.3866 59.4881 65.1014 60.0297 67.8434 60.0307C70.5853 60.0317 73.3005 59.492 75.8337 58.4427C78.3668 57.3933 80.6683 55.8547 82.6063 53.9151C84.5442 51.9754 86.0808 49.6726 87.128 47.1386L77.485 43.1447C76.8722 44.6235 75.9275 45.9415 74.724 46.9969C73.5204 48.0523 72.0902 48.8166 70.544 49.2309C68.9978 49.6452 67.3771 49.6983 65.8071 49.3861C64.2371 49.0739 62.76 48.4048 61.4899 47.4305L79.4811 39.9777L84.3034 37.9815L85.6945 37.4042C87.0645 39.9333 89.0124 42.103 91.3795 43.7368C93.7467 45.3706 96.4663 46.4223 99.3169 46.8061C102.167 47.19 105.068 46.8953 107.783 45.9459C110.498 44.9966 112.951 43.4194 114.941 41.3429C116.931 39.2664 118.403 36.7492 119.236 33.9963C120.07 31.2434 120.241 28.3326 119.737 25.5009C119.232 22.6693 118.066 19.9967 116.333 17.701C114.601 15.4052 112.35 13.5511 109.765 12.2897C110.906 11.3287 112.297 10.7136 113.775 10.5165C115.253 10.3194 116.757 10.5487 118.109 11.1773C119.461 11.8059 120.606 12.8076 121.408 14.0647C122.21 15.3218 122.637 16.7819 122.637 18.2731V44.3662H133.075V26.101C133.075 24.025 133.899 22.0339 135.367 20.5659C136.835 19.0979 138.826 18.2731 140.902 18.2731C142.979 18.2731 144.97 19.0979 146.438 20.5659C147.906 22.0339 148.73 24.025 148.73 26.101V41.7569C148.73 46.6011 150.655 51.2469 154.08 54.6723C157.506 58.0977 162.151 60.022 166.996 60.022V49.5848C164.919 49.5848 162.928 48.7601 161.46 47.292C159.992 45.824 159.168 43.833 159.168 41.7569ZM57.496 37.7842C57.735 35.9672 58.4482 34.2451 59.5639 32.7911C60.6796 31.3372 62.1585 30.2027 63.8518 29.5016C65.5451 28.8006 67.3931 28.5578 69.2101 28.7977C71.027 29.0375 72.7487 29.7515 74.2021 30.8679L57.496 37.7842ZM101.763 36.5383C100.215 36.5383 98.7012 36.0792 97.414 35.219C96.1267 34.3589 95.1233 33.1363 94.5309 31.706C93.9384 30.2756 93.7834 28.7017 94.0854 27.1832C94.3874 25.6647 95.133 24.2699 96.2277 23.1752C97.3225 22.0804 98.7173 21.3349 100.236 21.0328C101.754 20.7308 103.328 20.8858 104.759 21.4783C106.189 22.0708 107.411 23.0741 108.272 24.3614C109.132 25.6487 109.591 27.1621 109.591 28.7103C109.591 30.7864 108.766 32.7775 107.298 34.2455C105.83 35.7135 103.839 36.5383 101.763 36.5383V36.5383Z" fill="#FF0080"></path>
+                        <path d="M0 83.1253H5.24683C7.29221 83.1253 9.14194 81.8339 9.14194 79.5954C9.14194 78.0458 8.14593 77.1848 7.32778 76.8232V76.7199C8.1815 76.2206 8.73286 75.3596 8.73286 74.2748C8.73286 72.4497 7.32778 71.0722 4.87333 71.0722H0V83.1253ZM2.68567 75.9106V73.2934H4.51761C5.38912 73.2934 5.97605 73.8099 5.97605 74.5503C5.97605 75.3424 5.42469 75.9106 4.49983 75.9106H2.68567ZM2.68567 80.8352V77.8736H4.46425C5.37133 77.8736 6.15391 78.3385 6.15391 79.3199C6.15391 80.3531 5.47805 80.8352 4.49983 80.8352H2.68567Z" fill="#FFB219"></path>
+                        <path d="M10.8891 83.1253H13.6459V78.9928C13.6459 77.4259 14.5174 76.4788 15.8692 76.4788H16.9541V73.9649H16.047C14.7842 73.9649 13.9483 74.7398 13.6281 75.4113H13.4859V74.0338H10.8891V83.1253Z" fill="#FFB219"></path>
+                        <path d="M20.1442 73.0179C21.0868 73.0179 21.7627 72.4669 21.7627 71.5715C21.7627 70.6761 21.0868 70.1251 20.1442 70.1251C19.2015 70.1251 18.5256 70.6761 18.5256 71.5715C18.5256 72.4669 19.2015 73.0179 20.1442 73.0179ZM18.7747 83.1253H21.5315V74.0338H18.7747V83.1253Z" fill="#FFB219"></path>
+                        <path d="M26.4858 83.1253H27.4284V80.7835H27.0905C26.5925 80.7835 26.3079 80.508 26.3079 79.957V70.2112H23.5511V80.267C23.5511 82.0405 24.6005 83.1253 26.4858 83.1253Z" fill="#FFB219"></path>
+                        <path d="M31.9223 83.1253H32.8649V80.7835H32.527C32.029 80.7835 31.7444 80.508 31.7444 79.957V70.2112H28.9876V80.267C28.9876 82.0405 30.037 83.1253 31.9223 83.1253Z" fill="#FFB219"></path>
+                        <path d="M35.7589 73.0179C36.7016 73.0179 37.3774 72.4669 37.3774 71.5715C37.3774 70.6761 36.7016 70.1251 35.7589 70.1251C34.8163 70.1251 34.1404 70.6761 34.1404 71.5715C34.1404 72.4669 34.8163 73.0179 35.7589 73.0179ZM34.3894 83.1253H37.1462V74.0338H34.3894V83.1253Z" fill="#FFB219"></path>
+                        <path d="M42.972 83.3491C44.5194 83.3491 45.302 82.5054 45.5688 82.0922H45.7111V83.1253H48.4501V74.0338H45.6933V75.0669H45.551C45.2309 74.5848 44.3771 73.8099 42.9009 73.8099C40.3753 73.8099 38.6323 75.7729 38.6323 78.6312C38.6323 81.4895 40.3931 83.3491 42.972 83.3491ZM43.5946 80.9385C42.2962 80.9385 41.4247 79.9915 41.4247 78.5795C41.4247 77.1848 42.2962 76.2206 43.5768 76.2206C44.8396 76.2206 45.7466 77.1332 45.7466 78.5795C45.7466 79.9226 44.9107 80.9385 43.5946 80.9385Z" fill="#FFB219"></path>
+                        <path d="M50.4731 83.1253H53.2299V78.0285C53.2299 77.0643 53.8702 76.2894 54.8306 76.2894C55.7733 76.2894 56.3424 76.961 56.3424 77.8908V83.1253H59.0993V77.0643C59.0993 75.1702 57.8187 73.8099 55.7377 73.8099C54.4749 73.8099 53.5856 74.4126 53.2121 75.0325H53.0698V74.0338H50.4731V83.1253Z" fill="#FFB219"></path>
+                        <path d="M65.4063 83.1253H67.3094V80.9213H66.0999C65.2818 80.9213 64.8905 80.508 64.8905 79.8365V76.1173H67.3449V74.0338H64.8905V71.5715H62.276V73.2417C62.276 73.7238 62.0092 74.051 61.5112 74.051H60.6219V76.1173H62.1337V79.9743C62.1337 81.9716 63.3609 83.1253 65.4063 83.1253Z" fill="#FFB219"></path>
+                        <path d="M73.6793 83.1253H76.4895V71.0722H73.6793V83.1253Z" fill="#FFB219"></path>
+                        <path d="M78.8888 83.1253H81.6456V78.0285C81.6456 77.0643 82.2859 76.2894 83.2463 76.2894C84.189 76.2894 84.7581 76.961 84.7581 77.8908V83.1253H87.515V77.0643C87.515 75.1702 86.2344 73.8099 84.1534 73.8099C82.8906 73.8099 82.0013 74.4126 81.6278 75.0325H81.4855V74.0338H78.8888V83.1253Z" fill="#FFB219"></path>
+                        <path d="M93.0394 83.3491C95.7073 83.3491 97.1657 82.0749 97.1657 80.3186C97.1657 76.2894 91.6877 78.063 91.6877 76.5822C91.6877 76.1 92.2213 75.7729 93.0572 75.7729C93.9643 75.7729 94.4445 76.1517 94.5334 76.7027H96.9167C96.7922 74.8086 95.2271 73.8099 93.0572 73.8099C90.5494 73.8099 89.1977 75.153 89.1977 76.7027C89.1977 80.6114 94.4979 78.8206 94.4979 80.4564C94.4979 80.9729 93.9821 81.3001 93.0572 81.3001C92.1501 81.3001 91.5988 80.9729 91.5276 80.3359H89.0198C89.0732 82.1783 90.336 83.3491 93.0394 83.3491Z" fill="#FFB219"></path>
+                        <path d="M99.0021 87.0856H101.759V82.0922H101.901C102.204 82.5915 103.022 83.3491 104.551 83.3491C107.077 83.3491 108.802 81.3862 108.802 78.5279C108.802 75.6696 107.041 73.8099 104.48 73.8099C102.915 73.8099 102.132 74.6364 101.866 75.0497H101.723V74.0338H99.0021V87.0856ZM103.858 80.9385C102.595 80.9385 101.706 80.0259 101.706 78.5795C101.706 77.2193 102.542 76.2206 103.858 76.2206C105.138 76.2206 106.01 77.1504 106.01 78.5795C106.01 79.9743 105.138 80.9385 103.858 80.9385Z" fill="#FFB219"></path>
+                        <path d="M111.992 73.0179C112.934 73.0179 113.61 72.4669 113.61 71.5715C113.61 70.6761 112.934 70.1251 111.992 70.1251C111.049 70.1251 110.373 70.6761 110.373 71.5715C110.373 72.4669 111.049 73.0179 111.992 73.0179ZM110.622 83.1253H113.379V74.0338H110.622V83.1253Z" fill="#FFB219"></path>
+                        <path d="M115.398 83.1253H118.155V78.9928C118.155 77.4259 119.027 76.4788 120.379 76.4788H121.463V73.9649H120.556C119.294 73.9649 118.458 74.7398 118.137 75.4113H117.995V74.0338H115.398V83.1253Z" fill="#FFB219"></path>
+                        <path d="M126.795 83.3491C128.342 83.3491 129.125 82.5054 129.392 82.0922H129.534V83.1253H132.273V74.0338H129.516V75.0669H129.374C129.054 74.5848 128.2 73.8099 126.724 73.8099C124.198 73.8099 122.455 75.7729 122.455 78.6312C122.455 81.4895 124.216 83.3491 126.795 83.3491ZM127.417 80.9385C126.119 80.9385 125.248 79.9915 125.248 78.5795C125.248 77.1848 126.119 76.2206 127.4 76.2206C128.662 76.2206 129.569 77.1332 129.569 78.5795C129.569 79.9226 128.734 80.9385 127.417 80.9385Z" fill="#FFB219"></path>
+                        <path d="M138.565 83.1253H140.468V80.9213H139.258C138.44 80.9213 138.049 80.508 138.049 79.8365V76.1173H140.503V74.0338H138.049V71.5715H135.434V73.2417C135.434 73.7238 135.167 74.051 134.669 74.051H133.78V76.1173H135.292V79.9743C135.292 81.9716 136.519 83.1253 138.565 83.1253Z" fill="#FFB219"></path>
+                        <path d="M143.568 73.0179C144.511 73.0179 145.187 72.4669 145.187 71.5715C145.187 70.6761 144.511 70.1251 143.568 70.1251C142.626 70.1251 141.95 70.6761 141.95 71.5715C141.95 72.4669 142.626 73.0179 143.568 73.0179ZM142.199 83.1253H144.956V74.0338H142.199V83.1253Z" fill="#FFB219"></path>
+                        <path d="M151.493 83.3491C154.517 83.3491 156.562 81.2657 156.562 78.5795C156.562 75.8934 154.517 73.8099 151.511 73.8099C148.469 73.8099 146.442 75.8934 146.442 78.5795C146.442 81.2657 148.487 83.3491 151.493 83.3491ZM151.493 80.9385C150.195 80.9385 149.234 79.9743 149.234 78.5795C149.234 77.202 150.195 76.2206 151.493 76.2206C152.809 76.2206 153.77 77.202 153.77 78.5795C153.77 79.957 152.809 80.9385 151.493 80.9385Z" fill="#FFB219"></path>
+                        <path d="M158.369 83.1253H161.126V78.0285C161.126 77.0643 161.767 76.2894 162.727 76.2894C163.67 76.2894 164.239 76.961 164.239 77.8908V83.1253H166.996V77.0643C166.996 75.1702 165.715 73.8099 163.634 73.8099C162.371 73.8099 161.482 74.4126 161.108 75.0325H160.966V74.0338H158.369V83.1253Z" fill="#FFB219"></path>
+                    </svg>
+                    <!-- brand logo end  -->
+        
+                </div>
+        
+                <div>
+        
+                    <button id="mobileBtn" type="button" class="text-gray-200 hover:text-white focus:text-white focus:outline-none transition-colors duration-300 ease-in-out md:hidden">
+        
+                        <!-- burger icon  -->
+                        <svg id="burger" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- burger end  -->
+                        
+                        <!-- close icon  -->
+                        <svg id="close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <!-- close end  -->
+        
+                    </button>
+        
+                </div>
+            </div>
+    
+            <nav id="nav" class="hidden md:inline">
+                <ul class="pt-2 pb-3 block md:flex text-center font-bold text-2xl h-screen md:h-full overflow-scroll">
+                    <li><a href="#" class="block rounded text-gray-300 hover:text-white transition-colors duration-300 ease-in-out">Home</a></li>
+                    <li><a href="#" class="block mt-2 py-2 rounded text-gray-200 hover:text-white transition-colors duration-300 ease-in-out">Experiences</a></li>
+                    <li><a href="#" class="block mt-2 py-2 rounded text-gray-200 hover:text-white transition-colors duration-300 ease-in-out">Careers resources</a></li>
+                    <li><a href="#" class="block mt-2 py-2 rounded text-gray-200 hover:text-white transition-colors duration-300 ease-in-out">Case studies</a></li>
+                    <li><a href="#" class="block mt-2 py-2 rounded text-gray-200 hover:text-white transition-colors duration-300 ease-in-out">Get started</a></li>
+                    <li><a href="#" class="block mt-2 py-2 rounded text-gray-200 hover:text-white transition-colors duration-300 ease-in-out">Submit an experience</a></li>
+                    <li><a href="#" class="block mt-8 py-2 rounded text-gray-200 hover:text-white transition-colors duration-300 ease-in-out font-normal text-base">Login</a></li>
+                    <li><a href="#" class="block mt-2 py-2 rounded text-gray-200 hover:text-white hover:bg-pink-600 transition-colors duration-300 ease-in-out font-normal text-base border-2 border-pink-500 p-4 rounded-3xl">Sign up</a></li>
+                </ul>      
+            </nav>
+        </div>
+    </header>
+
+    <main class="overflow-hidden">
+        <section class="bg-purple-900">
+            
+            <div class="container">
+
+                <div class="text-gray-200 py-8">
+
+                    <h2 class="text-5xl pb-4 text-white font-bold">Bringing STEM to life through real-world engineering</h2>
+                    <p>Brilliant experiences, inspiring careers resources and stories that showcase modern engineering</p>
+
+                </div>
+                
+
+                <div class="hero-tab-card bg-purple-100 rounded-lg relative -bottom-10 overflow-hidden xl:max-w-3xl">
+
+                    <h3 class="p-4 font-bold text-2xl">Find Experiences</h3>
+
+                    <div class="flex items-center p-4">
+                        <img class="mr-4" src="img/Rosette.svg" alt=""> 
+                        <p>We only feature experiences that meet our <a>quality criteria</a></p>  
+                    </div>
+
+                    <div class="search-tab">
+
+                        <nav class="py-2 px-4">
+                            
+                            <ul class="flex">
+                                <li class="sm:inline"> <button class="p-2 active-tab">Near me</button> </li>
+                                <li class="sm:inline"> <button class="p-2">By experience name</button> </li>
+                            </ul>
+                            
+                        </nav>
+
+                        <form class="flex flex-col p-4 sm:flex-row sm:items-center">
+                            <input class="p-3 rounded-3xl my-1 text-center sm:w-9/12 sm:mr-4" type="text" name="name" id="name" placeholder="Enter school name or postcode">
+                            <input class="text-white font-bold bg-pink-600 rounded-3xl p-3 block mt-4 sm:mt-0 text-center sm:w-1/4" type="submit" name="Search" id="search">
+                        </form>
+
+                        <div class="bg-yellow-400 p-4">
+                            <p>Even during COVID, you can still inspire your students with our <a href="#" class="font-bold hover:underline text-blue-600">brilliant digital experiences!</a></p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-12">
+
+            <div class="container">
+
+                <div class="pt-8">
+                    <h2 class="font-extrabold text-3xl">Under the spotlight</h2>
+                    <p>We've brought together these featured experiences and resources to inspire you.</p>
+                </div>
+
+                <div class="spotlight xl:flex xl:flex-wrap justify-between">
+
+                    <!-- card start  -->
+
+                <div class="card my-8 border-t-8 border-yellow-500 rounded shadow-none hover:shadow-xl transition-shadow duration-200 ease-in-out xl:w-4/12">
+                    
+                    <div class="border relative p-3 rounded">
+
+                        <a class="" href="#">
+
+                            <h3 class="py-2 font-extrabold text-xl">Back to school inspiration</h3>
+        
+                            <p>
+                                Make this school year the best yet: 
+                                use Neon to bring your subject to life with brilliant experienecs, 
+                                inspiring careers resources, and relatable case storeis!
+                            </p>
+        
+                            <div class="flex pt-8">
+                                <p>6 experiecnes</p>
+                                <span class="text-gray-300">&nbsp; | &nbsp; </span>
+                                <p>6 resources</p>
+                            </div>
+        
+                            <span class="text-blue-500 font-bold text-sm">View collection</span>
+    
+                        </a>
+
+                    </div>
+                    
+
+                </div>
+
+                <!-- card end  -->
+
+                <!-- card start  -->
+
+                <div class="card my-8 border-t-8 border-blue-300 rounded shadow-none hover:shadow-xl transition-shadow duration-200 ease-in-out xl:w-4/12">
+
+                    <div class="border p-3 rounded">
+
+                        <a class="" href="#">
+
+                            <h3 class="py-2 font-extrabold text-xl">Engineering to save the planet</h3>
+        
+                            <p>
+                                Could you ask your students to find future enery solutions?
+                                Can robots save the environment? This collection is for you
+                                to inspire your students to solve the grand challenges with the 
+                                marvels of engineering
+                            </p>
+        
+                            <div class="flex pt-8">
+                                <p>9 experiecnes</p>
+                                <span class="text-gray-300">&nbsp; | &nbsp; </span>
+                                <p>4 resources</p>
+                            </div>
+        
+                            <span class="text-blue-500 font-bold text-sm">View collection</span>
+    
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- card end  -->
+
+                <!-- card start  -->
+
+                <div class="card my-8 border-t-8 border-pink-500 rounded shadow-none hover:shadow-xl transition-shadow duration-200 ease-in-out xl:w-4/12">
+
+                    <div class="border p-3 rounded">
+
+                        <a class="" href="#">
+
+                            <h3 class="py-2 font-extrabold text-xl">Finding a solution</h3>
+        
+                            <p>
+                                How do you prepare your students for jobs that 
+                                don’t exist yet? Set your students up for a brilliant 
+                                future by pushing them to solve problems creatively 
+                                – right now.
+                            </p>
+        
+                            <div class="flex pt-8">
+                                <p>5 experiecnes</p>
+                                <span class="text-gray-300">&nbsp; | &nbsp; </span>
+                                <p>6 resources</p>
+                            </div>
+        
+                            <span class="text-blue-500 font-bold text-sm">View collection</span>
+    
+                        </a>
+
+                    </div>           
+
+                </div>
+
+                <!-- card end  -->
+
+                </div>
+
+                
+                    
+            </div>
+            
+        </section>
+
+        <section class="mt-12 bg-purple-100 max-h-screen overflow-hidden">
+
+            <div class="container pt-14 flex flex-col md:flex-row md:items-center md:py-6">
+
+                <img src="img/neons-first-birthday-infographic.jpg" alt="" class="infographic transform rotate-12 py-12 order-2 max-w-xs relative -right-32 -top-12 md:order-first md:static">
+
+                <div class="md:max-w-2xl md:ml-20">
+                    <h2 class="font-extrabold text-3xl">Neon is 1!</h2>
+
+                    <p>
+                        Happy birthday to us! Since 29 September 2020, 
+                        when Neon made its first appearance online, over 
+                        65,000 visitors have come to check out the site, looking at over 
+                        220,000 pages. 1,750 teachers and careers advisors from 1,100 
+                        amazing schools are now registered users, with access to all its 
+                        146 experiences, 33 careers resources and 123 case studies.
+                    </p>
+
+                    <p>Here's to the next 12 months, it's guaranteed to be even bigger and better!</p>
+
+                    <a href="#" class="text-white font-bold bg-pink-600 rounded-3xl p-4 block mt-4 text-center relative z-2 sm:w-72">Download our infographic</a>
+
+                </div>     
+
+            </div>
+
+        </section>
+
+        <section class="mt-12">
+
+            <div class="container">
+
+                <h2 class="font-extrabold text-3xl text-center px-3">Helping teachers get started with engineering inspiration</h2>
+
+                <div class="icons sm:flex sm:flex-wrap justify-center">
+
+                    <div class="icon-card flex flex-col items-center text-center p-8 sm:max-w-xs sm:mr-4">
+
+                        <img src="img/puzzle-bulb.svg" alt="">
+    
+                        <h3 class="font-bold text-2xl">Bitesize inspiration</h3>
+    
+                        <p>A series of short and easy to arrange activities.</p>
+    
+                    </div>
+
+                    <div class="icon-card flex flex-col items-center text-center p-8 sm:max-w-xs sm:mr-4">
+
+                        <img src="img/calendar.svg" alt="">
+    
+                        <h3 class="font-bold text-2xl">Activities for all timeframes</h3>
+    
+                        <p>Explore experiences that last under an hour to those that take up a day.</p>
+    
+                    </div>
+
+                    <div class="icon-card flex flex-col items-center text-center p-8 sm:max-w-xs sm:mr-4">
+
+                        <img src="img/academic-cap.svg" alt="">
+    
+                        <h3 class="font-bold text-2xl">Learn from other schools</h3>
+    
+                        <p>Get practical tips from schools across the UK.</p>
+    
+                    </div>
+
+                </div>
+
+                <a href="#" class="text-white font-bold bg-pink-600 rounded-3xl p-4 block mt-4 text-center max-w-xs mr-auto ml-auto">Learn more</a>
+
+            </div>
+
+        </section>
+
+        <section class="mt-12">
+
+            <div class="container">
+
+                <div>
+
+                    <h2 class="font-extrabold text-3xl">Brilliant experiences</h2>
+
+                    <a href="#">
+                        <img src="img/left-arrow.svg" alt="" class="transform rotate-180 inline w-2 pt-1 mr-2">
+                        <span class="text-blue-500 font-bold">View all experiences </span>
+                        
+                    </a>
+
+                </div>
+
+                
+
+                <div class="experiences-wrapper sm:flex sm:flex-wrap sm:justify-between">
+
+                    <div class="experience my-8 border rounded-lg overflow-hidden relative md:w-1/2 xl:w-4/12">
+
+                        <button class="w-8 p-1 absolute bg-white rounded-full right-2 top-2">
+                            <svg class="Favourite_heart" role="presentation" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" viewBox="-2 -2 32 30" xml:space="preserve">
+                                <path stroke="#ff0080" stroke-width="2px" d="M20.2 3.3c2 0 3.9.7 5.3 2.1 1.4 1.4 2.2 3.2 2.2 5.1 0 1.9-.8 3.7-2.2 5.1L14.7 25.9c-.1.1-.3.2-.5.2s-.4-.1-.5-.2L2.9 15.6C1.5 14.2.7 12.4.7 10.5c0-1.9.8-3.7 2.2-5.1C4.3 4 6.2 3.3 8.2 3.3s3.9.8 5.3 2.1l.7.7.7-.7c1.4-1.3 3.3-2.1 5.3-2.1z"></path>
+                            </svg>
+                        </button>
+
+                        <img src="img/aae-nfu-harry-robot.jpg" alt="" class="sm:max-h-48 w-full object-cover">
+
+                        <div class="p-3">
+
+                            <span class="uppercase text-pink-500 text-xs font-bold">Online</span>
+
+                            <h3 class="py-2 font-extrabold text-xl">Anytime, anywhere engineers</h3>
+        
+                            <p>
+                                Find out about the future of food and farming 
+                                with amazing live or on-demand engineering sessions 
+                                alongside immersive 3D tours of agricultural engineering 
+                                workplaces.
+                            </p>
+
+                        </div>
+        
+                        <ul class="py-2 px-3">
+                            <li>
+                                <img src="img/Age.svg" alt="" class="w-4 inline mr-2 py-2">
+                                Ages 10 to 13
+                            </li>
+                            <li>
+                                <img src="img/Location.svg" alt="" class="w-4 inline mr-2 py-2">
+                                Online
+                            </li>
+                            <li>
+                                <img src="img/Date.svg" alt="" class="w-4 inline mr-2 py-2">
+                                Multi-session
+                            </li>
+                            <li>
+                                <img src="img/Cost.svg" alt="" class="w-4 inline mr-2 py-2">
+                                Free
+                            </li>
+                        </ul>
+    
+    
+                    </div>
+
+                    <div class="experience my-8 border rounded-lg overflow-hidden relative md:w-1/2 xl:w-4/12">
+
+                        <button class="w-8 p-1 absolute bg-white rounded-full right-2 top-2">
+                            <svg class="Favourite_heart" role="presentation" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" viewBox="-2 -2 32 30" xml:space="preserve">
+                                <path stroke="#ff0080" stroke-width="2px" d="M20.2 3.3c2 0 3.9.7 5.3 2.1 1.4 1.4 2.2 3.2 2.2 5.1 0 1.9-.8 3.7-2.2 5.1L14.7 25.9c-.1.1-.3.2-.5.2s-.4-.1-.5-.2L2.9 15.6C1.5 14.2.7 12.4.7 10.5c0-1.9.8-3.7 2.2-5.1C4.3 4 6.2 3.3 8.2 3.3s3.9.8 5.3 2.1l.7.7.7-.7c1.4-1.3 3.3-2.1 5.3-2.1z"></path>
+                            </svg>
+                        </button>
+
+                        <img src="img/inspiring-young-people-sustainability.jpg" alt="" class="sm:max-h-48 w-full object-cover">
+
+                        <div class="p-3">
+
+                            <span class="uppercase text-pink-500 text-xs font-bold">Event</span>
+
+                            <h3 class="py-2 font-extrabold text-xl">Tomorrow's Enginners Week Schools COP</h3>
+        
+                            <p>
+                                Watch the Schools COP broadcast and use the lesson plans 
+                                to give students the opportunity to learn more about engineering 
+                                and the positive impact that it can have on the climate emergency.
+                            </p>
+
+                        </div>
+        
+                        <ul class="py-2 px-3">
+                            <li>
+                                <img src="img/Age.svg" alt="" class="w-4 inline mr-2 py-2">
+                                Ages 11 to 19
+                            </li>
+                            <li>
+                                <img src="img/Location.svg" alt="" class="w-4 inline mr-2 py-2">
+                                Online
+                            </li>
+                            <li>
+                                <img src="img/Date.svg" alt="" class="w-4 inline mr-2 py-2">
+                                1 to 2 hours
+                            </li>
+                            <li>
+                                <img src="img/Cost.svg" alt="" class="w-4 inline mr-2 py-2">
+                                Free
+                            </li>
+                        </ul>
+    
+    
+                    </div>
+
+                    <div class="experience my-8 border rounded-lg overflow-hidden relative md:w-1/2 xl:w-4/12">
+
+                        <button class="w-8 p-1 absolute bg-white rounded-full right-2 top-2">
+                            <svg class="Favourite_heart" role="presentation" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" viewBox="-2 -2 32 30" xml:space="preserve">
+                                <path stroke="#ff0080" stroke-width="2px" d="M20.2 3.3c2 0 3.9.7 5.3 2.1 1.4 1.4 2.2 3.2 2.2 5.1 0 1.9-.8 3.7-2.2 5.1L14.7 25.9c-.1.1-.3.2-.5.2s-.4-.1-.5-.2L2.9 15.6C1.5 14.2.7 12.4.7 10.5c0-1.9.8-3.7 2.2-5.1C4.3 4 6.2 3.3 8.2 3.3s3.9.8 5.3 2.1l.7.7.7-.7c1.4-1.3 3.3-2.1 5.3-2.1z"></path>
+                            </svg>
+                        </button>
+
+                        <img src="img/enginuity-plane.png" alt="" class="sm:max-h-48 w-full object-cover">
+
+                        <div class="p-3">
+
+                            <span class="uppercase text-pink-500 text-xs font-bold">Project</span>
+
+                            <h3 class="py-2 font-extrabold text-xl">Skills Miner Aerospace</h3>
+        
+                            <p>
+                                4 levels built in Minecraft to introduce 12 to 
+                                14 year olds to new and future technologies, and the 
+                                skills required for rewarding careers in aerospace engineering.
+                            </p>
+
+                        </div>
+        
+                        <ul class="py-2 px-3">
+                            <li>
+                                <img src="img/Age.svg" alt="" class="w-4 inline mr-2 py-2">
+                                Ages 12 to 14
+                            </li>
+                            <li>
+                                <img src="img/Location.svg" alt="" class="w-4 inline mr-2 py-2">
+                                Online
+                            </li>
+                            <li>
+                                <img src="img/Date.svg" alt="" class="w-4 inline mr-2 py-2">
+                                Flexible project work
+                            </li>
+                            <li>
+                                <img src="img/Cost.svg" alt="" class="w-4 inline mr-2 py-2">
+                                Free
+                            </li>
+                        </ul>
+    
+    
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="mt-12">
+
+            <div class="container">
+
+                <div>
+
+                    <h2 class="font-extrabold text-3xl">Career resources</h2>
+
+                    <a href="#">
+                        <img src="img/left-arrow.svg" alt="" class="transform rotate-180 inline w-2 pt-1 mr-2">
+                        <span class="text-blue-500 font-bold">View all career resources</span>              
+                    </a>
+
+                </div>
+
+                <div class="resources sm:flex sm:flex-wrap sm:justify-between">
+
+                    <div class="resource-item my-8 overflow-hidden md:w-1/2 xl:flex">
+
+                        <div class="relative rounded-lg bg-purple-100 sm:mr-8 xl:w-1/2">
+
+                            <button class="w-8 p-1 absolute bg-white rounded-full right-2 top-2">
+                                <svg class="Favourite_heart" role="presentation" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" viewBox="-2 -2 32 30" xml:space="preserve">
+                                    <path stroke="#ff0080" stroke-width="2px" d="M20.2 3.3c2 0 3.9.7 5.3 2.1 1.4 1.4 2.2 3.2 2.2 5.1 0 1.9-.8 3.7-2.2 5.1L14.7 25.9c-.1.1-.3.2-.5.2s-.4-.1-.5-.2L2.9 15.6C1.5 14.2.7 12.4.7 10.5c0-1.9.8-3.7 2.2-5.1C4.3 4 6.2 3.3 8.2 3.3s3.9.8 5.3 2.1l.7.7.7-.7c1.4-1.3 3.3-2.1 5.3-2.1z"></path>
+                                </svg>
+                            </button>
+    
+                            <img src="img/engineer-your-future-cover.jpg" alt="" class="object-contain p-3 h-full object-cover object-center">
+
+                        </div>
+
+                        <div class="py-3 xl:pt-0 xl:pb-3 xl:w-1/2">
+
+                            <span class="uppercase text-pink-500 text-xs font-bold">Presentation</span>
+
+                            <h3 class="py-2 font-extrabold text-xl">Engineer your future</h3>
+        
+                            <p>
+                                A PowerPoint presentation for teachers, advisers and ambassadors to 
+                                use with 14 to 19 year olds, to inform and inspire young people about a career in engineering.
+                                If you would like to preview this resource on your mobile device, please download our <a> Engineer your future PDF</a>.
+                            </p>
+
+                        </div>
+    
+    
+                    </div>
+
+                    <div class="resource-item my-8 overflow-hidden md:w-1/2 xl:flex">
+
+                        <div class="relative flex justify-center rounded-lg bg-purple-100 sm:mr-8 xl:w-1/2">
+
+                            <button class="w-8 p-1 absolute bg-white rounded-full right-2 top-2">
+                                <svg class="Favourite_heart" role="presentation" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" viewBox="-2 -2 32 30" xml:space="preserve">
+                                    <path stroke="#ff0080" stroke-width="2px" d="M20.2 3.3c2 0 3.9.7 5.3 2.1 1.4 1.4 2.2 3.2 2.2 5.1 0 1.9-.8 3.7-2.2 5.1L14.7 25.9c-.1.1-.3.2-.5.2s-.4-.1-.5-.2L2.9 15.6C1.5 14.2.7 12.4.7 10.5c0-1.9.8-3.7 2.2-5.1C4.3 4 6.2 3.3 8.2 3.3s3.9.8 5.3 2.1l.7.7.7-.7c1.4-1.3 3.3-2.1 5.3-2.1z"></path>
+                                </svg>
+                            </button>
+    
+                            <img src="img/thumb-leaflet-what-is-engineering.jpg" alt="" class="object-scale-down p-3 w-36 h-full object-cover object-center">
+
+                        </div>
+
+                        <div class="py-3 xl:pt-0 xl:pb-3 xl:w-1/2">
+
+                            <span class="uppercase text-red-700 text-xs font-bold">Booklet</span>
+
+                            <h3 class="py-2 font-extrabold text-xl">What is engineering</h3>
+        
+                            <p>
+                                This 8-page booklet helps students and teachers understand engineering.
+                            </p>
+
+                        </div>
+    
+    
+                    </div>
+
+                    <div class="resource-item my-8 overflow-hidden md:w-1/2 xl:flex">
+
+                        <div class="relative flex justify-center rounded-lg bg-purple-100 sm:mr-8 xl:w-1/2">
+
+                            <button class="w-8 p-1 absolute bg-white rounded-full right-2 top-2">
+                                <svg class="Favourite_heart" role="presentation" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" viewBox="-2 -2 32 30" xml:space="preserve">
+                                    <path stroke="#ff0080" stroke-width="2px" d="M20.2 3.3c2 0 3.9.7 5.3 2.1 1.4 1.4 2.2 3.2 2.2 5.1 0 1.9-.8 3.7-2.2 5.1L14.7 25.9c-.1.1-.3.2-.5.2s-.4-.1-.5-.2L2.9 15.6C1.5 14.2.7 12.4.7 10.5c0-1.9.8-3.7 2.2-5.1C4.3 4 6.2 3.3 8.2 3.3s3.9.8 5.3 2.1l.7.7.7-.7c1.4-1.3 3.3-2.1 5.3-2.1z"></path>
+                                </svg>
+                            </button>
+    
+                            <img src="img/thumb-leaflet-100-jobs-in-stem-1.jpg" alt="" class="object-scale-down p-3 w-56 h-full object-cover object-center">
+
+                        </div>
+
+                        <div class="py-3 xl:pt-0 xl:pb-3 xl:w-1/2">
+
+                            <span class="uppercase text-pink-500 text-xs font-bold">Poster</span>
+
+                            <h3 class="py-2 font-extrabold text-xl">100 jobs in STEM</h3>
+        
+                            <p>
+                                A popular poster highlighting 100 exciting job roles that link to STEM.
+
+                            </p>
+
+                        </div>
+    
+    
+                    </div>
+
+                    <div class="resource-item my-8 overflow-hidden md:w-1/2 xl:flex">
+
+                        <div class="relative flex justify-center rounded-lg bg-purple-100 sm:mr-8 xl:w-1/2">
+
+                            <button class="w-8 p-1 absolute bg-white rounded-full right-2 top-2">
+                                <svg class="Favourite_heart" role="presentation" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" viewBox="-2 -2 32 30" xml:space="preserve">
+                                    <path stroke="#ff0080" stroke-width="2px" d="M20.2 3.3c2 0 3.9.7 5.3 2.1 1.4 1.4 2.2 3.2 2.2 5.1 0 1.9-.8 3.7-2.2 5.1L14.7 25.9c-.1.1-.3.2-.5.2s-.4-.1-.5-.2L2.9 15.6C1.5 14.2.7 12.4.7 10.5c0-1.9.8-3.7 2.2-5.1C4.3 4 6.2 3.3 8.2 3.3s3.9.8 5.3 2.1l.7.7.7-.7c1.4-1.3 3.3-2.1 5.3-2.1z"></path>
+                                </svg>
+                            </button>
+    
+                            <img src="img/thumb-leaflet-from-idea-to-career.jpg" alt="" class="object-scale-down p-3 w-36 h-full object-cover object-center">
+
+                        </div>
+
+                        <div class="py-3 xl:pt-0 xl:pb-3 xl:w-1/2">
+
+                            <span class="uppercase text-pink-500 text-xs font-bold">Booklet</span>
+
+                            <h3 class="py-2 font-extrabold text-xl">From idea to career</h3>
+        
+                            <p>
+                                12 different engineering disciplines to help students work out which area(s) might be right for them.
+                            </p>
+
+                        </div>
+    
+    
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="mt-12 bg-purple-200">
+
+            <div class="container py-8 text-center sm:max-w-xl">
+
+                <h2 class="font-extrabold text-3xl">Contributors - join us</h2>
+
+                <p>If you provide bright and brilliant engineering experiences for schools, we’d like to feature them on Neon</p>
+
+                <a href="#" class="text-white font-bold bg-pink-600 rounded-3xl p-4 block mt-4 text-center sm:w-72 ml-auto mr-auto">Find out how</a>
+
+            </div>
+
+        </section>
+
+        <section class="mt-12">
+
+            <div class="container">
+
+                <div>
+
+                    <h2 class="font-extrabold text-3xl">Case studies</h2>
+
+                    <a href="#">
+                        <img src="img/left-arrow.svg" alt="" class="transform rotate-180 inline w-2 pt-1 mr-2">
+                        <span class="text-blue-500 font-bold">View all case studies</span>
+                    </a>
+
+                </div>
+
+                <div class="resources sm:flex sm:flex-wrap sm:justify-between">
+
+                    <div class="resource-item my-8 overflow-hidden md:w-1/2 xl:flex">
+
+                        <div class="relative rounded-lg bg-purple-100 sm:mr-8 xl:w-1/2">
+
+                            <button class="w-8 p-1 absolute bg-white rounded-full right-2 top-2">
+                                <svg class="Favourite_heart" role="presentation" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" viewBox="-2 -2 32 30" xml:space="preserve">
+                                    <path stroke="#ff0080" stroke-width="2px" d="M20.2 3.3c2 0 3.9.7 5.3 2.1 1.4 1.4 2.2 3.2 2.2 5.1 0 1.9-.8 3.7-2.2 5.1L14.7 25.9c-.1.1-.3.2-.5.2s-.4-.1-.5-.2L2.9 15.6C1.5 14.2.7 12.4.7 10.5c0-1.9.8-3.7 2.2-5.1C4.3 4 6.2 3.3 8.2 3.3s3.9.8 5.3 2.1l.7.7.7-.7c1.4-1.3 3.3-2.1 5.3-2.1z"></path>
+                                </svg>
+                            </button>
+    
+                            <img src="img/ayisha-pawr-og.jpg" alt="" class="rounded-lg h-full object-cover object-center">
+
+                        </div>
+
+                        <div class="py-3 xl:pt-0 xl:pb-3 xl:w-1/2">
+
+                            <span class="uppercase text-pink-500 text-xs font-bold">Case study</span>
+
+                            <h3 class="py-2 font-extrabold text-xl">Engineering without borders</h3>
+        
+                            <p>
+                                STEM ambassador Ayisha is keen to highlight that there is a place for women in the engineering sector.
+                            </p>
+
+                        </div>
+    
+    
+                    </div>
+
+                    <div class="resource-item my-8 overflow-hidden md:w-1/2 xl:flex">
+
+                        <div class="relative rounded-lg bg-purple-100 sm:mr-8 xl:w-1/2">
+
+                            <button class="w-8 p-1 absolute bg-white rounded-full right-2 top-2">
+                                <svg class="Favourite_heart" role="presentation" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" viewBox="-2 -2 32 30" xml:space="preserve">
+                                    <path stroke="#ff0080" stroke-width="2px" d="M20.2 3.3c2 0 3.9.7 5.3 2.1 1.4 1.4 2.2 3.2 2.2 5.1 0 1.9-.8 3.7-2.2 5.1L14.7 25.9c-.1.1-.3.2-.5.2s-.4-.1-.5-.2L2.9 15.6C1.5 14.2.7 12.4.7 10.5c0-1.9.8-3.7 2.2-5.1C4.3 4 6.2 3.3 8.2 3.3s3.9.8 5.3 2.1l.7.7.7-.7c1.4-1.3 3.3-2.1 5.3-2.1z"></path>
+                                </svg>
+                            </button>
+    
+                            <img src="img/ainsley-james-og.jpg" alt="" class="rounded-lg h-full object-cover object-center">
+
+                        </div>
+
+                        <div class="py-3 xl:pt-0 xl:pb-3 xl:w-1/2">
+
+                            <span class="uppercase text-pink-500 text-xs font-bold">Video case study</span>
+
+                            <h3 class="py-2 font-extrabold text-xl">Rollercoaster engineering at Thorpe Park</h3>
+        
+                            <p>
+                                Rollercoasters are an adrenaline rush, but did you know that 
+                                it's engineers putting the thrills and chills into your favourite rides?
+                            </p>
+
+                        </div>
+    
+    
+                    </div>
+
+                    <div class="resource-item my-8 overflow-hidden md:w-1/2 xl:flex">
+
+                        <div class="relative rounded-lg bg-purple-100 sm:mr-8 xl:w-1/2">
+
+                            <button class="w-8 p-1 absolute bg-white rounded-full right-2 top-2">
+                                <svg class="Favourite_heart" role="presentation" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" viewBox="-2 -2 32 30" xml:space="preserve">
+                                    <path stroke="#ff0080" stroke-width="2px" d="M20.2 3.3c2 0 3.9.7 5.3 2.1 1.4 1.4 2.2 3.2 2.2 5.1 0 1.9-.8 3.7-2.2 5.1L14.7 25.9c-.1.1-.3.2-.5.2s-.4-.1-.5-.2L2.9 15.6C1.5 14.2.7 12.4.7 10.5c0-1.9.8-3.7 2.2-5.1C4.3 4 6.2 3.3 8.2 3.3s3.9.8 5.3 2.1l.7.7.7-.7c1.4-1.3 3.3-2.1 5.3-2.1z"></path>
+                                </svg>
+                            </button>
+    
+                            <img src="img/arthur-lewis-nunes-og.jpg" alt="" class="rounded-lg h-full object-cover object-center">
+
+                        </div>
+
+                        <div class="py-3 xl:pt-0 xl:pb-3 xl:w-1/2">
+
+                            <span class="uppercase text-pink-500 text-xs font-bold">Video case study</span>
+
+                            <h3 class="py-2 font-extrabold text-xl">Making waves</h3>
+        
+                            <p>
+                                Acoustic engineers make gigs, concerts and speeches sound great. Arthur works with architects to improve sound in new buildings through good design...
+                            </p>
+
+                        </div>
+    
+    
+                    </div>
+
+                    <div class="resource-item my-8 overflow-hidden md:w-1/2 xl:flex">
+
+                        <div class="relative rounded-lg bg-purple-100 sm:mr-8 xl:w-1/2">
+
+                            <button class="w-8 p-1 absolute bg-white rounded-full right-2 top-2">
+                                <svg class="Favourite_heart" role="presentation" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" viewBox="-2 -2 32 30" xml:space="preserve">
+                                    <path stroke="#ff0080" stroke-width="2px" d="M20.2 3.3c2 0 3.9.7 5.3 2.1 1.4 1.4 2.2 3.2 2.2 5.1 0 1.9-.8 3.7-2.2 5.1L14.7 25.9c-.1.1-.3.2-.5.2s-.4-.1-.5-.2L2.9 15.6C1.5 14.2.7 12.4.7 10.5c0-1.9.8-3.7 2.2-5.1C4.3 4 6.2 3.3 8.2 3.3s3.9.8 5.3 2.1l.7.7.7-.7c1.4-1.3 3.3-2.1 5.3-2.1z"></path>
+                                </svg>
+                            </button>
+    
+                            <img src="img/samantha-micklewright-og.jpg" alt="" class="rounded-lg h-full object-cover object-center">
+
+                        </div>
+
+                        <div class="py-3 xl:pt-0 xl:pb-3 xl:w-1/2">
+
+                            <span class="uppercase text-pink-500 text-xs font-bold">Case study</span>
+
+                            <h3 class="py-2 font-extrabold text-xl">Making communication easier</h3>
+        
+                            <p>
+                                Samantha works with technology to make communication easier for those who might find it difficult.
+                            </p>
+
+                        </div>
+    
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="mt-12">
+
+            <div class="container">
+
+                <h3 class="font-bold text-xl">We're proud to be supported by</h3>
+
+                <div class="flex flex-wrap items-center justify-center py-4">
+
+                    <a href="#" class="flex items-center w-4/12"><img src="img/cas_pri_logo_tower_fullcolour_rgb.png" alt="" class="my-2 w-7/12"></a>
+                    <a href="#" class="flex items-center w-4/12"><img src="img/tscsf-logo-with-pecten.jpg" alt="" class="my-2 w-7/12"></a>
+                    <a href="#" class="flex items-center w-4/12"><img src="img/iop-logo.jpg" alt="" class="my-2 w-7/12"></a>
+                    <a href="#" class="flex items-center w-4/12"><img src="img/stem_learning_rgb.png" alt="" class="my-2 w-7/12"></a>
+                    <a href="#" class="flex items-center w-4/12"><img src="img/iet-logo.jpg" alt="" class="my-2 w-7/12"></a>
+                    <a href="#" class="flex items-center w-4/12"><img src="img/sb-partnership-logo.png" alt="" class="my-2 w-7/12"></a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="mt-12">
+
+            <div class="container py-8">
+
+                <div class="bg-purple-200 rounded-lg p-8 lg:text-left lg:flex lg:flex-wrap lg:justify-between lg:items-center">
+
+                    <div>
+
+                        <h2 class="font-bold text-3xl">Join a growing network of teachers on Neon.</h2>
+
+                        <p>Get insider tips and be the first to know about new experiences and resources.</p>
+
+                    </div>
+
+                    <a href="#" class="text-white font-bold bg-pink-600 rounded-3xl p-4 block mt-4 text-center w-4/5 sm:w-72">Create your Newon account</a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer class="mt-6 py-12 bg-purple-700">
+
+            <div class="container text-white">
+
+                <div class="lg:flex lg:justify-between lg:py-8">
+
+                    <div class="social order-2">
+
+                        <h3 class="font-bold">Follow us</h3>
+    
+                        <nav class="social-icons">
+
+                            <ul class="flex">
+                                <li class="filter saturate-0 brightness-200"><a href="#" class=""> <img src="img/Twitter.svg" alt="" class="w-8 mr-4"> </a></li>
+                                <li class="filter saturate-0 brightness-200"><a href="#" class=""> <img src="img/Facebook.svg" alt="" class="w-8"> </a></li>
+                            </ul>
+
+                        </nav>
+                        
+                    </div>
+
+                    <nav class="py-8 lg:py-0">
+
+                        <ul class="lg:flex">
+                            <li class="mb-1 lg:mr-6"> <a href="#" class="hover:underline"> Privacy policy</a> </li>
+                            <li class="mb-1 lg:mr-6"> <a href="#" class="hover:underline"> Cookie policy</a> </li>
+                            <li class="mb-1 lg:mr-6"> <a href="#" class="hover:underline"> Terms conditions</a> </li>
+                            <li class="mb-1 lg:mr-6"> <a href="#" class="hover:underline"> Your data</a> </li>
+                        </ul>
+
+                    </nav>
+
+                </div> 
+
+                <div class="lg:flex lg:justify-between ">
+
+                    <div class="sponsor mb-8 order-2">
+                        <h3 class="lg:-mb-6 lg:p-0 lg:text-right">Powered by</h3>
+                        <img src="img/eng-uk-logo.svg" alt="" class="w-32 lg:w-48">
+                    </div>
+
+                    <div class="text-gray-300 text-sm">
+                        <p>Copyright © 2021 EngineeringUK</p>
+                        <p>Northern & Shell Building, 5th Floor, 10 Lower Thames Street, London EC3R 6EN</p>
+                        <p>EngineeringUK is the working name of The Engineering and Technology Board, a company limited by guarantee.</p>
+                        <p>Registered in England No. 4322409, Registered Charity No. 1089678.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
