@@ -2,7 +2,7 @@
 const burger = document.querySelector("#burger");
 const closeIcon = document.querySelector("#close");
 const mobileBtn = document.querySelector("#mobileBtn");
-const navMenu = document.querySelector("#nav");
+const navMenu = document.querySelector("#mobileNav");
 const body = document.querySelector("body");
 
 mobileBtn.addEventListener('click', () => {
